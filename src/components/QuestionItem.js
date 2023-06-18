@@ -1,5 +1,4 @@
 import React from "react";
-import url  from "../constant"
 
 function QuestionItem({ question, onDeleteClick, onAnswerChange }) {
   const { id, prompt, answers, correctIndex } = question;

@@ -22,16 +22,10 @@ function QuestionList({questions, setQuestions}) {
     headers : { "Content-Type": "application/json"},
     body: JSON.stringify({correctIndex : selection})
   }
-
- /*  const response = await fetch(`${url}/questions/${id}`, config);
-  const updatedQuestion = await response.json();
-  const updatedQuestions = questions.map(question => {
-    if (question.id === id) {
-      return updatedQuestion;
-    } else {
-      return question;
-    }
-  }); */
+   // look for question in array
+    // find the correct id
+    // path the id 
+    // change that in array
 
     const response = await fetch(`${url.questions}/${id}`, config).then(r=>r.json())
     
@@ -43,10 +37,7 @@ function QuestionList({questions, setQuestions}) {
       }
     })
     setQuestions(updatedQuestions)
-    // look for question in array
-    // find the correct id
-    // path the id 
-    // change that in array
+   
   }
   const questionMap = questions.map(question => 
   <QuestionItem key={question.id}  
